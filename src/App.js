@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import logo from "./assets/logo.jpeg"; // तुझा लोगो path
+import logo from "./assets/logo.jpeg";
+import './App.css';
 
 const API_URL = "https://6784f1831ec630ca33a6775d.mockapi.io/Adarash_Tarun_Mandal";
 
@@ -158,13 +159,13 @@ function App() {
                       <>
                         <button
                           onClick={() => updateStatus(e.id, "Approved")}
-                          className="btn btn-sm btn-success me-1"
+                          className="btn btn-sm btn-success me-1 mb-2"
                         >
                           Approve
                         </button>
                         <button
                           onClick={() => updateStatus(e.id, "Rejected")}
-                          className="btn btn-sm btn-danger me-1"
+                          className="btn btn-sm btn-danger me-1 mb-2"
                         >
                           Reject
                         </button>
@@ -172,7 +173,7 @@ function App() {
                     )}
                     <button
                       onClick={() => deleteEntry(e.id)}
-                      className="btn btn-sm btn-secondary"
+                      className="btn btn-sm btn-secondary mb-2"
                     >
                       Delete
                     </button>
