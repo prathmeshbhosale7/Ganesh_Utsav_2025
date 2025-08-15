@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import logo from "./assets/logo.jpeg";
+import qr1 from "./assets/QR1.jpeg";
+import qr2 from "./assets/QR2.jpeg";
 import './App.css';
 
 const API_URL = "https://6784f1831ec630ca33a6775d.mockapi.io/Adarash_Tarun_Mandal";
@@ -57,28 +59,60 @@ function App() {
     <div className="container my-4">
       {/* LOGO + TITLE */}
       <div className="text-center mb-4">
-        <div className="d-flex flex-column align-items-center">
+        <div className="d-flex justify-content-center align-items-center gap-4 flex-wrap">
+
+          {/* Left QR Code */}
           <img
-            src={logo}
-            alt="Adarsh Tarun Mandal Logo"
+            src={qr1}
+            alt="QR Left"
+            className="d-none d-lg-block"
             style={{
               width: "100px",
               height: "100px",
               objectFit: "cover",
-              borderRadius: "50%",
               border: "3px solid orange",
-              marginBottom: "10px"
+              borderRadius: "10px"
             }}
           />
-          <h1 className="fw-bold" style={{color: "#FF8C00"}}>
-            आदर्श तरुण मंडळ गणेशोत्सव २०२५ <br/> सभासद वर्गणी
-          </h1>
+
+          {/* Logo + Title */}
+          <div className="d-flex flex-column align-items-center">
+            <img
+              src={logo}
+              alt="Adarsh Tarun Mandal Logo"
+              style={{
+                width: "100px",
+                height: "100px",
+                objectFit: "cover",
+                borderRadius: "50%",
+                border: "3px solid orange",
+                marginBottom: "10px"
+              }}
+            />
+            <h1 className="fw-bold" style={{ color: "#FF8C00", textAlign: "center" }}>
+              आदर्श तरुण मंडळ गणेशोत्सव २०२५ <br /> सभासद वर्गणी
+            </h1>
+          </div>
+
+          {/* Right QR Code */}
+          <img
+            src={qr2}
+            alt="QR Right"
+            style={{
+              width: "100px",
+              height: "100px",
+              objectFit: "cover",
+              border: "3px solid orange",
+              borderRadius: "10px"
+            }}
+          />
+
         </div>
       </div>
 
       <div className="alert alert-success text-center fw-bold">
-        एकूण जमा वर्गणी (Approved): ₹ {totalApproved} <br/> <br/>
-        गणेशोत्सव २०२५ साठी <br/> एकूण खर्च : ₹ १ ,५५ ,०००/-
+        एकूण जमा वर्गणी (Approved): ₹ {totalApproved} <br /> <br />
+        गणेशोत्सव २०२५ साठी <br /> एकूण खर्च : ₹ १ ,५५ ,०००/-
       </div>
 
       <div className="text-center mb-3">
@@ -148,8 +182,8 @@ function App() {
                     e.status === "Approved"
                       ? "text-success fw-bold"
                       : e.status === "Rejected"
-                      ? "text-danger fw-bold"
-                      : "text-warning fw-bold"
+                        ? "text-danger fw-bold"
+                        : "text-warning fw-bold"
                   }
                 >
                   {e.status}
