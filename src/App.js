@@ -78,7 +78,7 @@ function App() {
 
       <div className="alert alert-success text-center fw-bold">
         एकूण जमा वर्गणी (Approved): ₹ {totalApproved} <br/> <br/>
-        गणेशोत्सव २०२५ साठी एकूण खर्च : ₹ १ ,५५ ,०००/-
+        गणेशोत्सव २०२५ साठी <br/> एकूण खर्च : ₹ १ ,५५ ,०००/-
       </div>
 
       <div className="text-center mb-3">
